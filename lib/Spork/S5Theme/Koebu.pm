@@ -494,7 +494,7 @@ div#header {
 }
 div#footer {
   height: 70px;
-  background: url(bg_slide.png) #d9d9d9 repeat-x;
+  background: url(bg_slide.png) #e6e6e6 repeat-x;
   z-index: 500000000;
 }
 
