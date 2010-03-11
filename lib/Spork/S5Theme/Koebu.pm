@@ -98,8 +98,8 @@ __template/s5/s5.html__
 
 <div class="slide">
     <h1>[% presentation_title %]</h1>
-<!--    <h2>[% presentation_place %]</h2>
-    <h3>[% presentation_date %]</h3> -->
+    <h2>[% presentation_place %]</h2>
+    <h3>[% presentation_date %]</h3>
 </div>
 
 [% FOREACH s = slides %]
@@ -124,7 +124,7 @@ __ui/framing.css__
 div#header, div#footer, div.slide {width: 100%; top: 0; left: 0;}
 div#header {top: 0; height: 1em;}
 div#footer {top: auto; bottom: 0; height: 2.5em;}
-div.slide {top: 0; width: 92%; padding: 1.6em 4% 4%;}
+div.slide {top: 0; width: 92%; padding: 1.2em 4% 110px 4%;}
 /*div#controls {left: 50%; top: 0; width: 50%; height: 100%;}
 #footer>*/
 div#controls {bottom: 0; top: auto; height: auto;}
@@ -495,7 +495,6 @@ div#header {
 div#footer {
   height: 70px;
   background: url(bg_slide.png) #e6e6e6 repeat-x;
-  z-index: 500000000;
 }
 
 body div#footer div#profile {
@@ -527,11 +526,10 @@ code {
   color: #fefefe;
 }
 
-/* TODO: for scroll
 div.slide {
   position: absolute !important;
+  z-index: 1;
 }
-*/
 
 div.slide h1 {
   font: normal 2em 'Trebuchet MS', sans-serif;
@@ -547,10 +545,20 @@ div.slide h1 {
 div#slide0 h1 {
   font-family: 'Trebuchet MS', sans-serif;
   text-align: left;
+  margin: 0 0 0.3em 0;
+}
+
+div#slide0 h2 {
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 div.slide h2 {
   font-size: 140%;
+  border-bottom: 6px dotted #ccff33;
+  padding: 0 0.3em 0.2em;
+  margin-bottom: 0.8em;
 }
 
 div.slide img {
