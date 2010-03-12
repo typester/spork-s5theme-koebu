@@ -540,6 +540,7 @@ div.slide h1 {
   color: #000;
   background: transparent;
   white-space: normal;
+  text-transform: none;
 }
 
 div#slide0 h1 {
